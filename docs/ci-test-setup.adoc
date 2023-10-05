@@ -47,7 +47,6 @@ Eksempel 1
 
 [plantuml, test-setup, svg]
 -------------------------------------------
-@startuml
 object "Test PC" as testpc
 object "USB Hub" as usbhub
 object "LoggIT 868 MHz" as loggit1
@@ -74,7 +73,6 @@ usbhub -- rfsim2
 usbhub -- relay
 relay "nr 0 out" -- dut
 power -- "nr 0 in" relay
-@enduml
 -------------------------------------------
 
 Eksempel 2
@@ -82,7 +80,7 @@ Eksempel 2
 [plantuml, seqence-diagram, svg]
 -------------------------------------------
 @startuml
-Bob->Alice: Hello world
+Bob->Alice: Hello world!
 @enduml
 -------------------------------------------
 
@@ -98,12 +96,15 @@ rectangle "Main" {
   (main.view)
   (singleton)
 }
+
 rectangle "Base" {
   (base.component)
   (component)
   (model)
 }
+
 rectangle "<b>main.ts</b>" as main_ts
+
 (component) ..> (base.component)
 main_ts ==> (main.view)
 (main.view) --> (component)
