@@ -47,6 +47,7 @@ Eksempel 1
 
 [plantuml, test-setup, svg]
 -------------------------------------------
+@startuml
 object "Test PC" as testpc
 object "USB Hub" as usbhub
 object "LoggIT 868 MHz" as loggit1
@@ -73,6 +74,7 @@ usbhub -- rfsim2
 usbhub -- relay
 relay "nr 0 out" -- dut
 power -- "nr 0 in" relay
+@enduml
 -------------------------------------------
 
 Eksempel 2
@@ -88,6 +90,7 @@ Eksempel 3
 
 [plantuml, flow-diagram, svg]
 -------------------------------------------
+@startuml
 skinparam ranksep 20
 skinparam dpi 125
 skinparam packageTitleAlignment left
@@ -110,4 +113,5 @@ main_ts ==> (main.view)
 (main.view) --> (component)
 (main.view) ...> (singleton)
 (singleton) ---> (model)
+@enduml
 -------------------------------------------
