@@ -81,7 +81,9 @@ Eksempel 2
 
 [plantuml, seqence-diagram, svg]
 -------------------------------------------
+@startuml
 Bob->Alice: Hello world
+@enduml
 -------------------------------------------
 
 Eksempel 3
